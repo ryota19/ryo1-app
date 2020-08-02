@@ -1,2 +1,12 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<h1 class="hidden">kogoto</h1>
+
+
+<div class="clearfix">
+    <div class="show-article-box">
+        <p class="title">
+            <%= @post.text %>
+        </p>
+    </div>
+        <%= link_to "削除", @post, method: :delete %>
+        <%= link_to "編集", edit_post_path %>
+</div>

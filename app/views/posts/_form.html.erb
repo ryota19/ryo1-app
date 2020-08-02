@@ -1,0 +1,13 @@
+<% if post.errors.present? %>
+    <ul>
+        <%= post.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+        <% end %>
+    </ul>
+<% end %>
+
+<%= form_with model: post, local: true do |f| %>
+    <%= f.label :content, 'kogoto' %>
+    <%= f.text_area :text, {class: "tolk"} %>
+    <%= f.submit '投稿' %>
+<% end %>

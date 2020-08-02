@@ -1,2 +1,7 @@
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+<h1>新規kogoto</h1>
+
+<div class="main posts-new">
+    <div class="text">
+        <%= render partial: 'form', locals: { post: @post } %>
+    </div>
+</div>
