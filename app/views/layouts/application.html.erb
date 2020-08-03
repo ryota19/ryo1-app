@@ -11,14 +11,14 @@
 
   <body>
     <header class="header">
-      <h1 class="logo"><%= link_to 'kogoto', "/post", {class: "b"} %></h1>
+      <h1 class="logo"><%= link_to 'kogoto', "/posts", {class: "b"} %></h1>
       <nav class="global-nav">
         <ul>
-          <% if current_user %>
+
             <li class="nav-item active"><%= link_to 'home', "/posts", {class: "a"} %></li>
             <li class="nav-item"><%= link_to 'new', "/posts/new", {class: "a"} %></li>
             <!-- ログアウト、user作成 -->
-          <% end %>
+
         </ul>
       </nav>
     </header>
