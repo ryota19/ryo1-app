@@ -10,6 +10,29 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="header">
+      <h1 class="logo"><%= link_to 'kogoto', "/post", {class: "a"} %></h1>
+      <nav class="global-nav">
+        <ul>
+          <% if current_user %>
+            <li class="nav-item active"><%= link_to 'home', "/posts", {class: "a"} %></li>
+            <li class="nav-item"><%= link_to 'new', "/posts/new", {class: "a"} %></li>
+            <!-- ログアウト、user作成 -->
+          <% end %>
+        </ul>
+      </nav>
+    </header>
+      <% if flash[:notice] %>
+        <div class="flash">
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
+      <div class="wrappper">
+        <main class="main">
+          <%= yield %>
+        </main>
+      </div>
+      <div class="fotter">
+      </div>
   </body>
 </html>
