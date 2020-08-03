@@ -4,7 +4,7 @@
 <% @posts.each do |post| %>
     <div class="post-article-box">
         <div class="title">
-            <% link_to post.text, "/posts/#{post.id}" %>
+            <%=link_to post.text, "/posts/#{post.id}" %>
         </div>
 <% end %>
     </div>
