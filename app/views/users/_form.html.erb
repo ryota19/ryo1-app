@@ -1,0 +1,24 @@
+<% if post.errors.present? %>
+    <ul>
+        <%= post.errors.full_messages.each do |message| %>
+         <li><%= message %></li>
+        <% end %>
+    </ul>
+<% end %>
+
+
+<%= form_with model:@user, local: true do |f| %>
+    <p>ユーザー名</p>
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'area' %>
+    <P>メールアドレス</P>
+        <%= f.label :email %>
+        <%= f.text_field :email, class: 'area' %>
+    <p>パスワード</p>
+        <%= f.label :password %>
+        <%= f.password_field :password, class: 'area' %>
+    <p>パスワード（確認）</p>
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confimation, class: 'area' %>
+    <%= f.submit '登録する', class: 'btn btn-primary' %>
+<% end %>
