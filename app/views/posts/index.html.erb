@@ -5,6 +5,12 @@
     <div class="post-article-box">
         <div class="title">
             <%=link_to post.text, "/posts/#{post.id}" %>
+            <% if current_user.already_favorited?(post) %>
+                <%= link_to 'OK', post_favorites_path(post), method: :delete %>
+            <% else %>
+                <%= link_to 'OK', post_favorites_path(post), method: :post %>
+            <% end %>
+            <%= post.favorites.count %>
         </div>
 <% end %>
     </div>
