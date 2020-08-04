@@ -2,10 +2,10 @@
 
 <div class="main users-index">
     <div class="container">
-        <%= @users.each do |user| %>
+        <% @users.each do |user| %>
         <div class="users-index-item">
             <div class="users-right">
-                <%= link_to user.name, "/users/#{user.id}" %>
+                <%= link_to user.name, "/users/#{@user}" %>
             </div>
         </div>
         <% end %>

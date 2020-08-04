@@ -12,7 +12,7 @@ class PostsController < ApplicationController
   end
 
   def create 
-    @post =Post.create(post_params)
+    @post =Post.create(post_params.merge(user_id: current_user.id))
 
     if @post.save
       flash[:notice] = "投稿を作成しました"
