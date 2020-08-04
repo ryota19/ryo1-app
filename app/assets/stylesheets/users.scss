@@ -1,3 +1,30 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+//index
+
+.users-index {
+    font-weight: 300;
+    margin: 60px 0 20px;
+    font-size: 48px;
+    color: red;
+}
+
+.users-index-item {
+    overflow: scroll;
+    margin: left;
+    padding: 20px 300px;
+    background-color: white;
+    box-shadow: 0 2px 6px #c1ced7;
+    display: table;
+    width: 50%;
+}
+
+.users-right {
+    color: black;
+    width: 90%;
+    text-align: table;
+    vertical-align: middle;
+}
