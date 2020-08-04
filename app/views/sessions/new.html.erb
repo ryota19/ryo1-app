@@ -1,2 +1,14 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<div class="session-form">
+<h1>kogotoログイン</h1>
+    <%= form_with scope: :session, local: true do |f| %>
+        <div class='email'>
+            <%= f.label :email %>
+            <%= f.text_field :email, id: 'session_email' %>
+        </div>
+        <div class='password'>
+            <%= f.label :password %>
+            <%= f.password_field :password, id: 'session_password' %>
+         <%= f.submit 'ログインする' %>
+        </div>
+    <% end %>
+</div>
