@@ -14,12 +14,15 @@
       <h1 class="logo"><%= link_to 'kogoto', "/posts", {class: "b"} %></h1>
       <nav class="global-nav">
         <ul>
-
+          <% if current_user %>
             <li class="nav-item active"><%= link_to 'home', "/posts", {class: "a"} %></li>
             <li class="nav-item"><%= link_to 'new', "/posts/new", {class: "a"} %></li>
             <li class="nav-item"><%= link_to 'user', "/users", {class: "a"} %></li>
-            <!-- ログアウト、user作成 -->
-
+            <li class="nav-item"><%= link_to 'logout', "/logout", {method: :delete, class: "a"} %></li>
+          <% else %>
+            <li class="nav-item"><%= link_to 'login', "/login", {class:"a"} %></li>
+            <li class="nav-item"><%= link_to 'usersnew', "_users/new", {class: "a"} %></li>
+          <% end %>
         </ul>
       </nav>
     </header>
