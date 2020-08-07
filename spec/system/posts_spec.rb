@@ -69,4 +69,21 @@ describe '投稿管理機能', type: :system do
             end
         end
     end
+
+    describe '投稿更新機能' do
+        let(:login_user) { user_a }
+
+        before do
+            visit edit_post_path(post_a)
+            fill_in 'text_area', with: post_text
+            click_button '投稿'
+        end
+        context '新規作成画面で投稿を入力したとき' do
+            let(:post_text) { '新規作成テストを書く' }
+
+            it '正常に登録される' do
+                expect(page).to have_selector '.flash', text: '投稿を編集しました'
+            end
+        end
+    end
 end
