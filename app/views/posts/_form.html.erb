@@ -7,7 +7,7 @@
 <% end %>
 
 <%= form_with model: post, local: true do |f| %>
-    <%= f.label :content, 'kogoto' %>
-    <%= f.text_area :text, {class: "tolk"} %>
+    <%= f.label :text, 'kogoto' %>
+    <%= f.text_area :text, id: 'text_area' %>
     <%= f.submit '投稿' %>
 <% end %>

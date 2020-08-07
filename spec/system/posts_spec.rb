@@ -43,4 +43,30 @@ describe '投稿管理機能', type: :system do
             it_behaves_like 'ユーザーAが作成した投稿が表示される'
         end
     end
+
+    describe '新規投稿機能' do
+        let(:login_user) { user_a }
+
+        before do
+            visit new_post_path
+            fill_in 'text_area', with: post_text
+            click_button '投稿'
+        end
+
+        context '新規作成画面で投稿を入力したとき' do
+            let(:post_text) { '新規作成テストを書く' }
+
+            it '正常に登録される' do
+                expect(page).to have_selector '.flash', text: '投稿を作成しました'
+            end
+        end
+
+        context '新規作成画面で名称を入力しなかったとき' do
+            let(:post_text) { '' }
+
+            it 'エラーとなる' do
+                expect(page).to have_text "Text can't be blank"
+            end
+        end
+    end
 end
