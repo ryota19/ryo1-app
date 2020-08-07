@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y \
     postgresql-client \
     yarn
 
+
 WORKDIR /ryo1-app
 COPY Gemfile Gemfile.lock /ryo1-app/
 RUN bundle install
