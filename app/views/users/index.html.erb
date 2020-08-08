@@ -5,7 +5,7 @@
         <% @users.each do |user| %>
         <div class="users-index-item">
             <div class="users-right">
-                <%= link_to user.name, "/users/#{@user}" %>
+                <%= link_to user.name, edit_user_path(user) %>
             </div>
         </div>
         <% end %>
