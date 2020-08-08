@@ -86,4 +86,18 @@ describe '投稿管理機能', type: :system do
             end
         end
     end
+
+    describe '投稿削除機能' do
+        let(:login_user) { user_a }
+        before do
+            visit post_path(post_a)
+            click_on '削除'
+        end
+
+        context '投稿削除' do
+            it '投稿が削除される' do
+                expect(page).to have_text '投稿を削除しました'
+            end
+        end
+    end
 end
