@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'ログイン機能'  do
+feature 'ログイン機能', type: :system do
 
     background do
         User.create!(name: 'user_a', email: 'a@example.com', password: 'password')   
