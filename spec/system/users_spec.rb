@@ -13,4 +13,15 @@ feature 'ログイン機能' do
 
         expect(page).to have_content 'ログインしました'
     end
+
+    scenario 'ログアウト' do
+       visit root_path
+       fill_in 'session_email', with: 'a@example.com'
+       fill_in 'session_password', with: 'password'
+       click_on 'ログイン'
+       click_on 'logout'
+
+       expect(page).to have_content 'ログアウトしました'
+    end
 end
+
