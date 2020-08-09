@@ -16,9 +16,9 @@
         <%= f.text_field :email, class: 'area' %>
     <p>パスワード</p>
         <%= f.label :password %>
-        <%= f.password_field :password, class: 'area' %>
+        <%= f.password_field :password, {id: 'session_password2',class: 'area'} %>
     <p>パスワード（確認）</p>
         <%= f.label :password_confirmation %>
-        <%= f.password_field :password_confimation, class: 'area' %>
-    <%= f.submit '登録する', class: 'btn btn-primary' %>
+        <%= f.password_field :password_confirmation, {id: 'session_passwordconfir',class: 'area'} %>
+    <%= f.submit '更新する', class: 'btn btn-primary' %>
 <% end %>
