@@ -28,7 +28,7 @@ feature 'ログイン機能', type: :system do
     context 'アカウント編集' do
         scenario 'アカウント編集' do
             visit users_path
-            click_on 'user_a'
+            click_on '編集'
             fill_in 'session_password2', with: 'password'
             fill_in 'session_passwordconfir', with: 'password'
             click_button '更新する'
@@ -37,5 +37,13 @@ feature 'ログイン機能', type: :system do
         end
     end
 
-    
+    context 'アカウント削除' do
+        scenario '削除' do
+            visit users_path
+            click_on 'user_a'
+            click_on '削除'
+            
+            expect(page).to have_content 'ユーザーを削除しました'
+        end
+    end
 end 
