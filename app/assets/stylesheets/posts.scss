@@ -52,7 +52,7 @@
     width: 130px;
     height: 150px;
     padding: 50px 300px;
-    margin-left: -60px;
+    //margin-left: -60px;
     margin-bottom: 30px;
     box-shadow: 6px 6px 8px -4px rgba(0, 0, 0, 0.15);
     transition: opacity 0.15s;
@@ -68,6 +68,13 @@
     line-height: 1.0;
 }
 
+.show-text1-box {
+    text-align: center;
+    padding: 50px ;
+    margin-bottom: 30px;
+    box-shadow: 6px 6px 8px -4px rgba(0, 0, 0, 0.15);
+    transition: opacity 0.15s;
+}
 
 //new
 
@@ -83,4 +90,10 @@
 
 .posts-show {
     padding: 60px 0;
+}
+
+//text_area
+
+.text_area {
+    text-align: center;
 }

@@ -6,7 +6,7 @@
             <div class="posts-show-item">
                 <h2><%= link_to @user.name, "/users/#{@user.id}/edit" %></h2>
                 <p><%= @user.email %></p>
-                <%= link_to '削除', @user, method: :delete %>
+                <%= link_to 'アカウント削除', @user, method: :delete %>
             </div>
 
             <% @user.posts.each do |post| %>

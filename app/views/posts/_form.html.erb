@@ -5,9 +5,10 @@
         <% end %>
     </ul>
 <% end %>
-
-<%= form_with model: post, local: true do |f| %>
-    <%= f.label :text, 'kogoto' %>
-    <%= f.text_area :text, id: 'text_area' %>
-    <%= f.submit '投稿' %>
-<% end %>
+<div class="text_area">
+    <%= form_with model: post, local: true do |f| %>
+        <%= f.label :text  %>
+        <%= f.text_area :text, {id: 'text_area', class: 'area'} %>
+        <%= f.submit '投稿' %>
+    <% end %>
+</div>

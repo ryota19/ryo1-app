@@ -1,12 +1,13 @@
 <h1 class="hidden">kogoto</h1>
 
-
-<div class="clearfix">
-    <div class="show-article-box">
-        <p class="show-title">
-            <%= @post.text %>
-        </p>
+<div class= "text-area">
+    <div class="show-text1-box">
+        <%= @post.text %>
     </div>
-        <%= link_to "削除", @post, method: :delete %>
-        <%= link_to "編集", edit_post_path %>
 </div>
+<%= link_to "削除", @post, method: :delete %>
+<%= link_to "編集", edit_post_path %>
+
+
+
+  

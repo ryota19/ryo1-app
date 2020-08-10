@@ -28,7 +28,8 @@ feature 'ログイン機能', type: :system do
     context 'アカウント編集' do
         scenario 'アカウント編集' do
             visit users_path
-            click_on '編集'
+            click_on 'user_a'
+            click_on 'user_a'
             fill_in 'session_password2', with: 'password'
             fill_in 'session_passwordconfir', with: 'password'
             click_button '更新する'
