@@ -6,7 +6,6 @@ describe '投稿管理機能', type: :system do
         let!(:post_a) { FactoryBot.create(:post, text: '最初の投稿', user: user_a) }
 
         before '各々のログイン' do
-            #FactoryBot.create(:post, text: '最初の投稿', user: user_a)
             visit login_path
             fill_in 'session_email', with: login_user.email
             fill_in 'session_password', with: login_user.password
