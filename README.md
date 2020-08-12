@@ -1,24 +1,22 @@
-# README
+# kogotoapp
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+概要
 
-Things you may want to cover:
+このアプリは家族や友人とkogotoを言い合うアプリです。
+家族で使う場合、洗い物や、洗濯、庭掃除などのやって欲しいことや、
+何かやり忘れているものがある時気軽に言えるアプリです。
 
-* Ruby version
 
-* System dependencies
+使用されている技術
 
-* Configuration
+Ruby/Rails/html/css/rspec/docker/travisci
+dockerでの環境構築、Taravisciでの自動テストを実装しました。
 
-* Database creation
+環境構築
 
-* Database initialization
+docker/dockercompose
 
-* How to run the test suite
+テスト
 
-* Services (job queues, cache servers, search engines, etc.)
+rspec/travisci
 
-* Deployment instructions
-
-* ...
