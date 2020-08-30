@@ -4,6 +4,7 @@ RUN apt-get update && apt-get install -y \
     libpq-dev \
     nodejs \
     postgresql-client \
+    vim \
     yarn
 
 

@@ -83,6 +83,8 @@ test:
 #
 production:
   <<: *default
-  database: ryo1-app_production
-  username: ryo1-app
-  password: <%= ENV['RYO1-APP_DATABASE_PASSWORD'] %>
+  host: <%= Rails.application.credentials.rds[:host] %>
+  database: <%= Rails.application.credentials.rds[:host] %>
+  username: <%= Rails.application.credentials.rds[:host] %>
+  password: <%= Rails.application.credentials.rds[:host] %>
+  #<%= ENV['RYO1-APP_DATABASE_PASSWORD'] %>
